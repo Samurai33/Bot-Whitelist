@@ -1,0 +1,23 @@
+{
+  "channels": {
+    "staffReview": "1397370242732134405",
+    "approvedNotify": "1397370243139113007",
+    "rejectedNotify": "1397370243139113008"
+  },
+  "roles": {
+    "approved": "1397370241754992676",
+    "visitor": "1397370241754992675"
+  },
+  "questions": [
+    { "key": "nome", "q": "Qual seu nome completo?" },
+    { "key": "idade", "q": "Qual sua idade?" },
+    { "key": "experiencia", "q": "Resuma sua experiência em RP." },
+    { "key": "amor_vida", "q": "Explique “Amor à Vida” no RP com suas palavras." },
+    { "key": "metagaming", "q": "O que é metagaming? Dê um exemplo." },
+    { "key": "rdm", "q": "O que é RDM e como evitar?" }
+  ],
+  "timeouts": {
+    "perQuestion": 600000,
+    "cooldown": 86400000
+  }
+}
