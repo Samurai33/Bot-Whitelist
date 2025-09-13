@@ -4,6 +4,29 @@ import { initializeInteractionHandler } from './interactions.js';
 import { initializeDmFlow } from './dmFlow.js';
 import { initializeSessionManager } from './session.js';
 import { initializeHelpers } from './helpers.js';
+import pino from 'pino';
+import fs from 'fs';
+
+// Modern logger (2025 standard): pino with pretty print and file logging
+const logger = pino({
+  level: process.env.LOG_LEVEL || 'info',
+  transport: {
+    target: 'pino-pretty',
+    options: {
+      colorize: true,
+      translateTime: 'yyyy-mm-dd HH:MM:ss',
+      ignore: 'pid,hostname',
+    },
+  },
+}, pino.destination({ dest: './bot.log', sync: false }));
+
+// Exibe arte ASCII no log ao iniciar
+try {
+  const art = fs.readFileSync('./asciiart', 'utf8');
+  logger.info('\n' + art);
+} catch (e) {
+  logger.warn('ASCII art não encontrada.');
+}
 
 // Initialize the Discord client with necessary intents and partials.
 // Intents determine which events the bot will receive from Discord.
@@ -24,7 +47,7 @@ initializeHelpers(client);
 
 // This event is triggered when the bot successfully logs in.
 client.once(Events.ClientReady, async () => {
-  console.log(`✅ Logado como ${client.user.tag}`);
+  logger.info({ event: 'ready', user: client.user.tag }, `✅ Logado como ${client.user.tag}`);
 
   // Fetch the guild from the configuration to register slash commands.
   // This ensures that the commands are only registered in the specified guild.
@@ -40,7 +63,7 @@ client.once(Events.ClientReady, async () => {
         .setDescription('Iniciar whitelist via Modal (sem DM)')
         .toJSON()
     ]);
-    console.log('⚙️ Comandos garantidos no GUILD.');
+    logger.info({ event: 'commands_registered', guild: guild.id }, '⚙️ Comandos garantidos no GUILD.');
   }
 });
 
@@ -50,4 +73,6 @@ initializeInteractionHandler(client);
 initializeDmFlow(client);
 
 // Log in to Discord with the bot's token.
-client.login(config.discordToken);
+client.login(config.discordToken).catch((err) => {
+  logger.error({ event: 'login_error', err }, 'Erro ao logar no Discord');
+});
