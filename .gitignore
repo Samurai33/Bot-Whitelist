@@ -1,0 +1,10 @@
+# Ignore sensitive and environment files
+.env
+bot.log
+node_modules/
+.DS_Store
+*.log
+# Ignore system files
+Thumbs.db
+# Ignore local config
+config.local.json

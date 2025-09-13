@@ -150,3 +150,15 @@ Samurai33 — [@samurai33](https://github.com/Samurai33)
 - [discord.js](https://discord.js.org/)
 - [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 - Comunidade open source Discord
+
+---
+
+## 🔒 Security & Sensitive Data
+
+> **Never commit your `.env` file or any sensitive data (like Discord tokens) to the repository!**
+>
+> - The `.env` file is already included in `.gitignore` and will not be tracked by git.
+> - Always store secrets and tokens in environment variables or secret managers.
+> - If you accidentally commit a secret, **revoke it immediately** and generate a new one.
+
+---
