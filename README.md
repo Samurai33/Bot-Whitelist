@@ -1,12 +1,12 @@
 <div align="center">
-  <img src="bot-whitelist.png" alt="Marola WL Bot" width="600" />
-  <h1>Bot Whitelistt</h1>
+  <img src="bot-whitelist.png" alt="bot-whitelist WL Bot" width="600" />
+  
   <p>Automatize o processo de whitelist do seu servidor Discord com eficiência, segurança e experiência moderna.</p>
   <p>
     <a href="https://discord.js.org/"><img src="https://img.shields.io/badge/discord.js-v14-blue?logo=discord" alt="discord.js"></a>
     <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/node-%3E=18.0.0-green?logo=node.js" alt="Node.js"></a>
-    <img src="https://img.shields.io/github/license/Samurai33/marola-wl-bot" alt="License">
-    <img src="https://img.shields.io/github/languages/top/Samurai33/marola-wl-bot" alt="Top Language">
+    <img src="https://img.shields.io/github/license/Samurai33/bot-whitelist" alt="License">
+    <img src="https://img.shields.io/github/languages/top/Samurai33/bot-whitelist" alt="Top Language">
   </p>
 </div>
 
@@ -14,7 +14,7 @@
 
 ## ✨ Visão Geral
 
-O **Marola WL Bot** é um bot para Discord focado em automatizar o processo de whitelist de servidores RP, tornando a experiência de aplicação mais justa, rápida e transparente para candidatos e staff.
+O **Bot WL** é um bot para Discord focado em automatizar o processo de whitelist de servidores RP, tornando a experiência de aplicação mais justa, rápida e transparente para candidatos e staff.
 
 ---
 
@@ -54,8 +54,8 @@ O **Marola WL Bot** é um bot para Discord focado em automatizar o processo de w
 
 ### Passos
 ```bash
-git clone https://github.com/Samurai33/marola-wl-bot.git
-cd marola-wl-bot
+git clone https://github.com/Samurai33/bot-whitelist.git
+cd bot-whitelist
 npm install
 ```
 
@@ -123,7 +123,7 @@ Veja mais em [`PRD.md`](./PRD.md)
 
 ## 🤝 Contribuindo
 
-Contribuições são bem-vindas! Veja as [issues](https://github.com/Samurai33/marola-wl-bot/issues) ou abra um PR.
+Contribuições são bem-vindas! Veja as [issues](https://github.com/Samurai33/bot-whitelist/issues) ou abra um PR.
 
 1. Fork o projeto
 2. Crie sua branch (`git checkout -b feature/NovaFuncionalidade`)
