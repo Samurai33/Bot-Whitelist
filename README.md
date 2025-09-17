@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Samurai33/marola-wl-bot/main/asciiart" alt="Marola WL Bot" width="600" />
-  <h1>Marola WL Bot</h1>
+  <img src="bot-whitelist.png" alt="Marola WL Bot" width="600" />
+  <h1>Bot Whitelistt</h1>
   <p>Automatize o processo de whitelist do seu servidor Discord com eficiência, segurança e experiência moderna.</p>
   <p>
     <a href="https://discord.js.org/"><img src="https://img.shields.io/badge/discord.js-v14-blue?logo=discord" alt="discord.js"></a>
